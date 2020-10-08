@@ -12,7 +12,6 @@ def nyc_pigeon_organizer(data)
   details_array = []
   # Array will include actual colors, which gender, and where they live
   data.collect do |description, details|
-    if description 
     details.each do |details, names|
       names.each do |names, i|
         new_hash[names] = {}
