@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
   data.collect do |description, details|
     details.collect do |details, names|
       names.collect do |names, i|
-        if !new_hash[names] 
+        if !new_hash[names]
           new_hash[names] = {}
         end
         if !new_hash[names][description]
