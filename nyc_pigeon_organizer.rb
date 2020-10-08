@@ -14,14 +14,10 @@ def nyc_pigeon_organizer(data)
   data.collect do |description, details|
     details.collect do |details, names|
       names.collect do |names, i|
-        #if description = :color
         new_hash[names] = {}
         new_hash[names][description] = []
         new_hash[names][description] << details.to_s
-      # elsif description = :gender
-      #   new_hash[names] = {}
-      #   new_hash[names][description] = []
-      #   new_hash[names][description] << details.to_s
+
         binding.pry
       end
     end
