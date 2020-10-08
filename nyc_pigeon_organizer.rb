@@ -18,7 +18,10 @@ def nyc_pigeon_organizer(data)
         new_hash[names] = {}
         new_hash[names][description] = []
         new_hash[names][description] << details.to_s
-      else description 
+      elsif description = :gender
+        new_hash[names] = {}
+        new_hash[names][description] = []
+        new_hash[names][description] << details.to_s
         binding.pry
       end
     end
