@@ -14,9 +14,11 @@ def nyc_pigeon_organizer(data)
   data.collect do |description, details|
     details.each do |details, names|
       names.each do |names, i|
+        if description = :color
         new_hash[names] = {}
         new_hash[names][description] = []
         new_hash[names][description] << details.to_s
+      else description 
         binding.pry
       end
     end
